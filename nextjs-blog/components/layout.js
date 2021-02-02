@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 const name = "Rey Anthony Omiple";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Next.js Blog page";
 
 
 export default function Layout({ children, home }) {
