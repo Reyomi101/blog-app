@@ -28,11 +28,10 @@ export default function Post({ postData }) {
         <Head>
           <title>{postData.title}</title>
         </Head>
-          <br />
-          {postData.id}
-          <br />
           <article>
-            <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+          <br />
+          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+          {postData.id}
             <div className={utilStyles.lighText}>
               <Date dateString={postData.date} /> 
             </div>
