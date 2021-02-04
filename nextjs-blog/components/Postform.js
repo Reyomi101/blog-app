@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { createPost } from '../pages/actions/postActions'
-
+import Button from '@material-ui/core/Button';
 
 
 class PostForm extends Component {
@@ -49,7 +49,7 @@ class PostForm extends Component {
                         <textarea name="body" onChange={this.onChange} value={this.state.body}/>
                     </div>
                     <br />
-                    <button type="submit">Submit</button>
+                    <Button variant="contained" color="primary" type="submit">Submit</Button>
                 </form>
             </div>
         );

@@ -4,11 +4,14 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 
+
+
 const name = "Rey Anthony Omiple";
 export const siteTitle = "Next.js Blog page";
 
 
 export default function Layout({ children, home }) {
+  
     return (
       <div className={styles.container}>
         <Head>
@@ -26,6 +29,8 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
+     
+
         <header className={styles.header}>
           {home ? (
             <>
