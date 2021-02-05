@@ -33,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "100%",
   },
   media: {
-    height: 240
+    height: 240,
+   
   },
   cardActions: {
     display: "flex",
@@ -68,7 +69,7 @@ export default function Home({ allPostsData }) {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="https://images.unsplash.com/photo-1612130191821-2a0d61d67ab0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+                image="/images/pexels-photo-256381.jpeg"
                 title="Contemplative Reptile"
               />
               <CardContent>
@@ -83,7 +84,43 @@ export default function Home({ allPostsData }) {
             </CardActionArea>
             <CardActions className={classes.cardActions}>
               <Box className={classes.author}>
-                <Avatar src="/images/profile.jpg" />
+                <Avatar src="/images/Reyomi_logo_dark.jpg" />
+                <Box ml={2} >
+                  <Typography  variant="subtitle2" component="p">
+                    James Bond
+                  </Typography>
+                   <Typography  variant="subtitle2" color="textSecondary" component="p">
+                    February 04, 2021
+                  </Typography>
+                </Box>
+              </Box>
+              <Box>
+                <BookmarkBorderIcon />
+              </Box>
+            </CardActions>
+          </Card>                         
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+        <Card className={classes.card}>
+          <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="/images/pexels-aidan-hyde-3415088.jpg.jpeg"
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions className={classes.cardActions}>
+              <Box className={classes.author}>
+                <Avatar src="/images/Reyomi_logo_dark.jpg" />
                 <Box ml={2} >
                   <Typography  variant="subtitle2" component="p">
                     James Bond
@@ -100,13 +137,76 @@ export default function Home({ allPostsData }) {
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
- 
+          <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="/images/Reyomi_logo.jpg"
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions className={classes.cardActions}>
+              <Box className={classes.author}>
+                <Avatar src="/images/Reyomi_logo_dark.jpg" />
+                <Box ml={2} >
+                  <Typography  variant="subtitle2" component="p">
+                    James Bond
+                  </Typography>
+                   <Typography  variant="subtitle2" color="textSecondary" component="p">
+                    February 04, 2021
+                  </Typography>
+                </Box>
+              </Box>
+              <Box>
+                <BookmarkBorderIcon />
+              </Box>
+            </CardActions>
+          </Card>                         
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-
+          <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="/images/pexels-photo-3861972.jpeg"
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions className={classes.cardActions}>
+              <Box className={classes.author}>
+                <Avatar src="/images/Reyomi_logo_dark.jpg" />
+                <Box ml={2} >
+                  <Typography  variant="subtitle2" component="p">
+                    James Bond
+                  </Typography>
+                   <Typography  variant="subtitle2" color="textSecondary" component="p">
+                    February 04, 2021
+                  </Typography>
+                </Box>
+              </Box>
+              <Box>
+                <BookmarkBorderIcon />
+              </Box>
+            </CardActions>
+          </Card>                         
         </Grid>
       </Grid>
         <Layout home>

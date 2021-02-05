@@ -13,8 +13,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#fff'
   },
   hero: {
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://images.unsplash.com/photo-1579062270059-79a24d07d198?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')`,
+      backgroundImage: `url('/images/pexels-photo-3861969.jpeg')`,
       height: "500px",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
@@ -23,8 +22,12 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      color: "#ffe082",
-      fontSize: "4rem"
+      color: "#e0f2f1",
+      fontSize: "4rem",
+      [theme.breakpoints.down("sm")]: {
+          height: 300,
+          fontSize: "3em"
+        }
   }
 }));
 

@@ -50,3 +50,36 @@
 .lightText {
 	color: #999;
 }
+
+.blogTitle {
+	font-weight: 800;
+	padding-bottom: 3em;
+}
+
+.card {
+	/* max-width: 100%; */
+	margin: 0 10px;
+	width: 240px;
+	/* height: 200px; */
+}
+
+.media {
+	height: 240px;
+}
+
+.cardActions {
+	display: flex;
+	margin: 0 10px;
+	justify-content: space-between;
+}
+
+.author {
+	display: flex;
+}
+
+.inline {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
