@@ -43,6 +43,24 @@ const useStyles = makeStyles((theme) => ({
 	author: {
 		display: 'flex',
 	},
+		hero: {
+		maxWidth: '100%',
+		backgroundImage: `url('/images/pexels-photo-3861972.jpeg')`,
+		height: '500px',
+		backgroundPosition: 'center',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		position: 'relative',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		color: '#e0f2f1',
+		fontSize: '4rem',
+		[theme.breakpoints.down('sm')]: {
+			height: 300,
+			fontSize: '3em',
+		},
+	},
 }));
 
 export async function getStaticProps() {
@@ -57,12 +75,23 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
 	const classes = useStyles();
 	return (
+		<Layout home>
+		<Box className={classes.hero} >
+				<Box>
+					<strong>
+						<bold>
+							<big>NEXT</big>
+						</bold>
+					</strong>
+					<small>js</small> <i>Blog page...</i>
+				</Box>
+			</Box>
 		<Container maxWidth='lg' className={classes.blogsContainer}>
 			<Provider store={store}>
 				<Typography variant='h4' className={classes.blogTitle}>
 					Articles
 				</Typography>
-				<Grid container spacing={3}>
+				{/* <Grid container spacing={3}>
 					<Grid item xs={12} sm={6} md={4}>
 						<Card className={classes.card}>
 							<CardActionArea>
@@ -197,7 +226,7 @@ export default function Home({ allPostsData }) {
 							<CardActionArea>
 								<CardMedia
 									className={classes.media}
-									image='/images/pexels-photo-3861972.jpeg'
+									image='/images/pexels-photo-3861969.jpeg'
 									title='Contemplative Reptile'
 								/>
 								<CardContent>
@@ -235,12 +264,11 @@ export default function Home({ allPostsData }) {
 							</CardActions>
 						</Card>
 					</Grid>
-				</Grid>
-				<Layout home>
+				</Grid> */}
 					<Head>
 						<title>{siteTitle}</title>
 					</Head>
-					<section className={utilStyles.headingMd}>
+					{/* <section className={utilStyles.headingMd}>
 						<p>
 							Hello, I'm <strong>Rey</strong>. I'm a software enginer and a
 							basic translator for (English/Japanese). You can contact me on
@@ -250,12 +278,12 @@ export default function Home({ allPostsData }) {
 							(This is a sample website - you’ll be building a site like this on{' '}
 							<a href='https://nextjs.org/learn'>our Next.js tutorial</a>.)
 						</p>
-					</section>
+					</section> */}
 					{/* Add this <section> tag below the existing <section> tag */}
 					<section
 						className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-						<h2 className={utilStyles.headingLg}>Blog</h2>
-						<ul className={utilStyles.list}>
+						{/* <h2 className={utilStyles.headingLg}>Blog</h2> */}
+						{/* <ul className={utilStyles.list}>
 							{allPostsData.map(({ id, date, title }) => (
 								<li className={utilStyles.listItem} key={id}>
 									<Link href={`/posts/${id}`}>
@@ -269,14 +297,15 @@ export default function Home({ allPostsData }) {
 									</small>
 								</li>
 							))}
-						</ul>
+						</ul> */}
 					</section>
-					<hr />
+					
 					<PostForm />
 					<br />
 					<Posts />
-				</Layout>
+				
 			</Provider>
 		</Container>
+		</Layout>
 	);
 }

@@ -1,13 +1,66 @@
+import React from 'react'
 import Head from 'next/head';
 import styles from '../styles/layout.module.css';
-import utilStyles from '../styles/utils.module.css';
+// import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import theme from '../components/theme';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import IconButton from '@material-ui/core/IconButton';
+// import {Link, NavLink } from 'react-router-dom'
+
+
 
 const name = 'Rey Anthony Omiple';
 export const siteTitle = 'Next.js Blog page';
 
+
+const useStyles = makeStyles((theme) => ({
+	appBar: {
+		backgroundColor: '#ddd',
+	},
+
+	links: {
+		textDecoration: 'none',
+		fontSize: '14px',
+		color: '#ffffff',
+	},
+}));
+
 export default function Layout({ children, home }) {
+	const classes = useStyles();
 	return (
+		<>
+		<AppBar className={classes.appBar} position='static'>
+				<Toolbar variant='dense'>
+					<Typography variant='h6' color='primary'>
+						<strong>
+							<bold>
+								<big>NEXT</big>
+							</bold>
+						</strong>
+						<small>js</small> Blog
+					</Typography>
+					<IconButton variant='h7'>
+						<a href='/' className={classes.links}>
+							Home
+						</a>
+					</IconButton>
+					<IconButton variant='h7'>
+						<a href='/addblog' className={classes.links}>
+							+Blog
+						</a>
+					</IconButton>
+					<IconButton variant='h7'>
+						<a href='/newIndex' className={classes.links}>
+							NewIndex
+						</a>
+					</IconButton>
+				</Toolbar>
+			</AppBar>
 		<div className={styles.container}>
 			<Head>
 				<link rel='icon' href='/favicon.ico' />
@@ -25,7 +78,7 @@ export default function Layout({ children, home }) {
 				<meta name='twitter:card' content='summary_large_image' />
 			</Head>
 
-			<header className={styles.header}>
+			{/* <header className={styles.header}>
 				{home ? (
 					<>
 						<img
@@ -53,7 +106,7 @@ export default function Layout({ children, home }) {
 						</h2>
 					</>
 				)}
-			</header>
+			</header> */}
 			<main>{children}</main>
 			{!home && (
 				<div className={styles.backToHome}>
@@ -63,5 +116,6 @@ export default function Layout({ children, home }) {
 				</div>
 			)}
 		</div>
+		</>
 	);
 }
