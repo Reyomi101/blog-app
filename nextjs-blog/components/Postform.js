@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createPost } from './actions/postActions';
 import Button from '@material-ui/core/Button';
+import Router from 'next/router';
 
 class PostForm extends Component {
 	constructor(props) {
@@ -15,6 +16,13 @@ class PostForm extends Component {
 		this.onChange = this.onChange.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
 	}
+
+	// componentDidMount() {
+	// 	const { pathname } = Router;
+	// 	if (pathname.props == '/addblog') {
+	// 		Router.push('/');
+	// 	}
+	// }
 
 	onChange(e) {
 		this.setState({ [e.target.name]: e.target.value });
@@ -29,6 +37,11 @@ class PostForm extends Component {
 		};
 
 		this.props.createPost(post);
+
+		// const { pathname } = Router;
+		// if (pathname == '/addblog') {
+		// 	Router.push('/');
+		// }
 	}
 
 	render() {

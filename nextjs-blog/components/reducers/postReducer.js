@@ -6,6 +6,7 @@ const initialState = {
 };
 
 export default function named(state = initialState, action) {
+	// console.log('greate!');
 	switch (action.type) {
 		case FETCH_POSTS:
 			return {

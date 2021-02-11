@@ -1,14 +1,61 @@
+import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+// import theme from '../components/theme';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+// import Box from '@material-ui/core/Box';
+// import IconButton from '@material-ui/core/IconButton';
+// import MenuIcon from '@material-ui/icons/Menu';
+import Button from '@material-ui/core/Button';
 
 const name = 'Rey Anthony Omiple';
 export const siteTitle = 'Next.js Blog page';
 
+const useStyles = makeStyles((theme) => ({
+	root: {
+		flexGrow: 1,
+	},
+	// appBar: {
+	// 	backgroundColor: '#ddd',
+	// },
+	title: {
+		flexGrow: 1,
+	},
+}));
+
 export default function Layout({ children, home }) {
+	const classes = useStyles();
 	return (
-		<div className={styles.container}>
+		<>
+			<div className={classes.appBar}>
+				<AppBar position='static'>
+					<Toolbar>
+						<Typography variant='h6' color='inherit' className={classes.title}>
+							<strong>
+								<bold>
+									<big>NEXT</big>
+								</bold>
+							</strong>
+							<small>js</small> Blog
+						</Typography>
+						<Button size='small' color='inherit'>
+							<Link href='/'>
+								<a className={utilStyles.links}>Home</a>
+							</Link>
+						</Button>
+						<Button size='small' color='inherit'>
+							<Link href='/addblog'>
+								<a className={utilStyles.links}>+Blog</a>
+							</Link>
+						</Button>
+					</Toolbar>
+				</AppBar>
+			</div>
 			<Head>
 				<link rel='icon' href='/favicon.ico' />
 				<meta
@@ -25,7 +72,7 @@ export default function Layout({ children, home }) {
 				<meta name='twitter:card' content='summary_large_image' />
 			</Head>
 
-			<header className={styles.header}>
+			{/* <header className={styles.header}>
 				{home ? (
 					<>
 						<img
@@ -53,8 +100,8 @@ export default function Layout({ children, home }) {
 						</h2>
 					</>
 				)}
-			</header>
-			<main>{children}</main>
+			</header> */}
+			<main className={styles.container}>{children}</main>
 			{!home && (
 				<div className={styles.backToHome}>
 					<Link href='/'>
@@ -62,6 +109,6 @@ export default function Layout({ children, home }) {
 					</Link>
 				</div>
 			)}
-		</div>
+		</>
 	);
 }

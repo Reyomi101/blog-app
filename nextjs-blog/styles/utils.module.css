@@ -83,3 +83,9 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
+
+.links {
+	color: #FFF;
+	text-decoration: none;
+}
