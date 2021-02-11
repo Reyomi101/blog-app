@@ -8,11 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@emotion/cache": "latest",
     "@emotion/eslint-plugin": "^11.2.0",
     "@emotion/react": "^11.1.5",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
+=======
+>>>>>>> 3216fc08f0c916d89fe95f17f29e3edb7b9af98e
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",

@@ -43,7 +43,11 @@ const useStyles = makeStyles((theme) => ({
 	author: {
 		display: 'flex',
 	},
+<<<<<<< HEAD
 	hero: {
+=======
+		hero: {
+>>>>>>> 3216fc08f0c916d89fe95f17f29e3edb7b9af98e
 		maxWidth: '100%',
 		backgroundImage: `url('/images/pexels-photo-3861972.jpeg')`,
 		height: '500px',
@@ -60,8 +64,11 @@ const useStyles = makeStyles((theme) => ({
 			height: 300,
 			fontSize: '3em',
 		},
+<<<<<<< HEAD
 		margin: '0 !important',
 		padding: '0 !important',
+=======
+>>>>>>> 3216fc08f0c916d89fe95f17f29e3edb7b9af98e
 	},
 }));
 
@@ -79,7 +86,11 @@ export default function Home({ allPostsData }) {
 	const classes = useStyles();
 	return (
 		<Layout home>
+<<<<<<< HEAD
 			<Box className={classes.hero}>
+=======
+		<Box className={classes.hero} >
+>>>>>>> 3216fc08f0c916d89fe95f17f29e3edb7b9af98e
 				<Box>
 					<strong>
 						<bold>
@@ -89,12 +100,21 @@ export default function Home({ allPostsData }) {
 					<small>js</small> <i>Blog page...</i>
 				</Box>
 			</Box>
+<<<<<<< HEAD
 			<Container maxWidth='lg' className={classes.blogsContainer}>
 				<Provider store={store}>
 					<Typography variant='h4' className={classes.blogTitle}>
 						Articles
 					</Typography>
 					{/* <Grid container spacing={3}>
+=======
+		<Container maxWidth='lg' className={classes.blogsContainer}>
+			<Provider store={store}>
+				<Typography variant='h4' className={classes.blogTitle}>
+					Articles
+				</Typography>
+				{/* <Grid container spacing={3}>
+>>>>>>> 3216fc08f0c916d89fe95f17f29e3edb7b9af98e
 					<Grid item xs={12} sm={6} md={4}>
 						<Card className={classes.card}>
 							<CardActionArea>
@@ -302,12 +322,22 @@ export default function Home({ allPostsData }) {
 							))}
 						</ul> */}
 					</section>
+<<<<<<< HEAD
 
 					<PostForm />
 					<br />
 					<Posts />
 				</Provider>
 			</Container>
+=======
+					
+					<PostForm />
+					<br />
+					<Posts />
+				
+			</Provider>
+		</Container>
+>>>>>>> 3216fc08f0c916d89fe95f17f29e3edb7b9af98e
 		</Layout>
 	);
 }
